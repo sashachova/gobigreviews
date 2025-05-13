@@ -1,0 +1,12 @@
+{
+  "uuid": "2909a255-e7cc-462d-9644-2664c56381d3",
+  "name": "Gobigreviews.Tests.SignUpTests.SignUp_UserIsRegisteredWithAllValidData",
+  "children": [
+    "566982a9-4b58-40c5-b7ff-199f5139e812"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1746636678342,
+  "stop": 1746636697135
+}

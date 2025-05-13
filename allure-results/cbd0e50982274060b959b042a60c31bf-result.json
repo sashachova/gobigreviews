@@ -1,0 +1,50 @@
+{
+  "uuid": "6b435c20-50ce-434c-8d8a-4b95664d1fec",
+  "historyId": "2b3e6523a2badcdc6d5aeac35ba11901",
+  "testCaseId": "bb850053e6c27d4e7f9847a03b2c6e0b",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_UserIsRegisteredWithAllValidData()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_UserIsRegisteredWithAllValidData"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "Successful User Registration",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Verifies that a user can register with valid data.",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1746635995055,
+  "stop": 1746636015353
+}

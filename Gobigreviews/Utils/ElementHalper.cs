@@ -44,6 +44,7 @@ namespace Gobigreviews.Utils
                 var element = wait.Until(ExpectedConditions.ElementIsVisible(locator));
                 element.Clear();
                 element.SendKeys(text);
+                //check is locator is added 
             }
 
             catch (Exception ex)
@@ -51,7 +52,7 @@ namespace Gobigreviews.Utils
                 Console.WriteLine($"Error typing into element {locator}: {ex.Message}");
        
             }
-            //check is locator is added 
+            
             
         }
 
