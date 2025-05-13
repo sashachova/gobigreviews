@@ -11,6 +11,7 @@ namespace Gobigreviews.Drivers
         {
             var options = new ChromeOptions();
             //options.AddArgument($"user-data-dir={Path.Combine(Directory.GetCurrentDirectory(), "ChromeTestProfile")}");
+            options.AddArgument("--headless=new");
             options.AddArgument("--disable-notifications");
             options.AddArgument("--disable-popup-blocking");
             options.AddArgument("--no-sandbox");
