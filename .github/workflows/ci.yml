@@ -10,18 +10,6 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
  
-    services:
-      selenium:
-        image: selenium/standalone-chrome
-        ports:
-          - 4444:4444
-        options: >-
-          --shm-size=2g
-          --health-cmd="curl -f http://localhost:4444 || exit 1"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
- 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -31,6 +19,24 @@ jobs:
       with:
         dotnet-version: '8.0.x'
  
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget gnupg unzip
+        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+ 
+    - name: Install ChromeDriver
+      run: |
+        CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
+        CHROMEDRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json" | jq -r --arg VER "$CHROME_VERSION" '.versions[] | select(.version | startswith($VER)) | .version' | head -n 1)
+        wget "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/${CHROMEDRIVER_VERSION}/linux64/chromedriver-linux64.zip"
+        unzip chromedriver-linux64.zip
+        sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+        sudo chmod +x /usr/local/bin/chromedriver
+ 
     - name: Restore dependencies
       run: dotnet restore
  
@@ -38,6 +44,4 @@ jobs:
       run: dotnet build --no-restore
  
     - name: Run tests
-      env:
-        SELENIUM_REMOTE_URL: http://localhost:4444/wd/hub
       run: dotnet test --no-build --logger "trx"

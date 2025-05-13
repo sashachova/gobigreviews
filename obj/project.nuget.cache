@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "olE1c50df9M=",
+  "dgSpecHash": "uiR//z/fiPM=",
   "success": true,
   "projectFilePath": "/Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/Gobigreviews.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,9 @@
     "/Users/aleksandratolmachova/.nuget/packages/selenium.webdriver.chromedriver/134.0.6998.16500/selenium.webdriver.chromedriver.134.0.6998.16500.nupkg.sha512",
     "/Users/aleksandratolmachova/.nuget/packages/seleniumextras.waithelpers/1.0.2/seleniumextras.waithelpers.1.0.2.nupkg.sha512",
     "/Users/aleksandratolmachova/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512",
+    "/Users/aleksandratolmachova/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/aleksandratolmachova/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
   ],
   "logs": []
 }
