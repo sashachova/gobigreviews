@@ -22,6 +22,7 @@ namespace Gobigreviews.Pages.Components
             wait.Until(driver => driver.FindElement(SignUpLink).Displayed);
             driver.FindElement(SignUpLink).Click();
         }
+        //add new components
 
     }
 
