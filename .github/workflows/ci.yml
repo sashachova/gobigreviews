@@ -45,8 +45,7 @@ jobs:
  
     - name: Run tests with Allure
       run: dotnet test --no-build --logger:"console;verbosity=normal"
-      env:
-        ALLURE_CONFIG: allureConfig.json
+      
  
     - name: Upload Allure results
       if: always()
