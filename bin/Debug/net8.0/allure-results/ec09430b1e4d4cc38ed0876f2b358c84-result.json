@@ -1,0 +1,66 @@
+{
+  "uuid": "b9390dbe-51c3-4a7b-890c-28f7d25211ef",
+  "historyId": "9494467e3f8cd0916f3542c7c953b7a9",
+  "testCaseId": "3414f34b28503fa6dabfbff17eba3be1",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_WithFakerGeneratedData(System.String,System.String,System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_WithFakerGeneratedData"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "SignUp with Faker-Generated Data",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Verifies registration with dynamically generated user data.",
+  "steps": [],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "name",
+      "value": "\"Amir Hand\"",
+      "excluded": false
+    },
+    {
+      "name": "email",
+      "value": "\"Diego_Rolfson84@gmail.com\"",
+      "excluded": false
+    },
+    {
+      "name": "password",
+      "value": "\"@1Aasaiaeiai\"",
+      "excluded": false
+    }
+  ],
+  "start": 1747419802697,
+  "stop": 1747419824148
+}
