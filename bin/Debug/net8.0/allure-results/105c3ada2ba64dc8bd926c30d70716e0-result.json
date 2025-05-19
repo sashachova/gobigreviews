@@ -1,0 +1,79 @@
+{
+  "uuid": "62c2dc84-096e-42cd-bdc0-594d8e58f136",
+  "historyId": "bd336489e754a69ed8590a2c59767410",
+  "testCaseId": "3414f34b28503fa6dabfbff17eba3be1",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_WithFakerGeneratedData(System.String,System.String,System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_WithFakerGeneratedData"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "SignUp with Faker-Generated Data",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  User profile button is not displayed\nAssert.That(SignUp.IsUserProfileButtonDisplayed(), Is.True)\n  Expected: True\n  But was:  False\n",
+    "trace": "   at Gobigreviews.Tests.SignUpTests.SignUp_WithFakerGeneratedData(String name, String email, String password) in /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/Gobigreviews/Tests/SignUpPageTests.cs:line 199\n"
+  },
+  "stage": "finished",
+  "description": "Verifies registration with dynamically generated user data.",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "c9ade24e-4cd5-49d1-a235-6d8f1dbe4ed2-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "name",
+      "value": "\"Camylle Dicki\"",
+      "excluded": false
+    },
+    {
+      "name": "email",
+      "value": "\"Patience.Rutherford@hotmail.com\"",
+      "excluded": false
+    },
+    {
+      "name": "password",
+      "value": "\"@1Aaxaeaaooi\"",
+      "excluded": false
+    }
+  ],
+  "start": 1747682640287,
+  "stop": 1747682672339
+}

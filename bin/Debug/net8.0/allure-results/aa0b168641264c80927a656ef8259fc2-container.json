@@ -1,0 +1,12 @@
+{
+  "uuid": "d0c74fd8-ae1b-4c25-8516-03e3bcad58e9",
+  "name": "Gobigreviews.Tests.SignUpTests.SignUp_ValidationErrorIsDisplayedWhenEmailHasAlreadyBeenTaken",
+  "children": [
+    "e0725437-e8b5-4a57-ac6d-04f71324dc86"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1747682609772,
+  "stop": 1747682640271
+}
