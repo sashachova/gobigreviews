@@ -1,0 +1,50 @@
+{
+  "uuid": "4a2f6524-9f3f-4e62-8e7d-8593d02e03eb",
+  "historyId": "55bbb7377f944d5c61c409c2da69cd1e",
+  "testCaseId": "8ad8db9eed3c1cc70a8c7cd86e7f907e",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_ShouldHaveLogoLink()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_ShouldHaveLogoLink"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    }
+  ],
+  "links": [],
+  "name": "Verify Logo Link on SignUp Page",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Checks if the logo is displayed with correct dimensions and verifies redirect on click.",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747682568281,
+  "stop": 1747682579261
+}

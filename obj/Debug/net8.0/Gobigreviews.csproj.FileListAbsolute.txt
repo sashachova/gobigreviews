@@ -7,6 +7,7 @@
 /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/bin/Debug/net8.0/nunit.engine.api.dll
 /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/bin/Debug/net8.0/nunit.engine.core.dll
 /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/bin/Debug/net8.0/testcentric.engine.metadata.dll
+/Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/bin/Debug/net8.0/allureConfig.json
 /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/bin/Debug/net8.0/Gobigreviews.deps.json
 /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/bin/Debug/net8.0/Gobigreviews.runtimeconfig.json
 /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/bin/Debug/net8.0/Gobigreviews.dll
