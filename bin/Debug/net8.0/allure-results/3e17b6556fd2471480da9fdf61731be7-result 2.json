@@ -1,0 +1,57 @@
+{
+  "uuid": "d86902fe-970f-4d08-b41d-922ebd7c0287",
+  "historyId": "59b32a34158ca291c330caee221eecec",
+  "testCaseId": "61ff404454078d7dd35a7cd01359ff25",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_RegistrationFormIsDisplayed()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_RegistrationFormIsDisplayed"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "Verify Registration Form Display",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Sign Up button is not displayed\nAssert.That(SignUp.IsSignUpButtonDisplayed(), Is.True)\n  Expected: True\n  But was:  False\n",
+    "trace": "   at Gobigreviews.Tests.SignUpTests.SignUp_RegistrationFormIsDisplayed() in /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/Gobigreviews/Tests/SignUpPageTests.cs:line 109\n"
+  },
+  "stage": "finished",
+  "description": "Ensures all fields and elements in the registration form are displayed.",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747682550526,
+  "stop": 1747682568195
+}
