@@ -51,7 +51,7 @@ jobs:
         sudo ln -s /opt/allure/bin/allure /usr/bin/allure
  
     - name: Run tests with Allure
-      run: dotnet test --no-build --logger:"Allure" --results-directory ./allure-results
+      run: dotnet test Gobigreviews.Tests/Gobigreviews.Tests.csproj --no-build --logger:"Allure" --results-directory ./allure-results
    
  
     - name: Generate Allure Report
