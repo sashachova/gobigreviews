@@ -62,13 +62,13 @@ jobs:
 
         run: |
 
-          dotnet add Gobigreviews.com/Gobigreviews.csproj package Allure.NUnit
+          dotnet add gobigreviews.com/Gobigreviews.csproj package Allure.NUnit 
 
-          dotnet add Gobigreviews.com/Gobigreviews.csproj package NUnit
+          dotnet add gobigreviews.com/Gobigreviews.csproj package NUnit
 
-          dotnet add Gobigreviews.com/Gobigreviews.csproj package NUnit3TestAdapter
+          dotnet add gobigreviews.com/Gobigreviews.csproj package NUnit3TestAdapter
 
-          dotnet add Gobigreviews.com/Gobigreviews.csproj package Microsoft.NET.Test.Sdk
+          dotnet add gobigreviews.com/Gobigreviews.csproj package Microsoft.NET.Test.Sdk
 
       - name: Run tests with Allure results
 
