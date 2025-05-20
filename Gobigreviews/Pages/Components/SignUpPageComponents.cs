@@ -24,7 +24,7 @@ namespace Gobigreviews.Pages.Components
         private By RepeatPasswordField => By.Name("confirm-password");
         private By TermsAndConditionsCheckbox => By.Name("toc");
         private By SubcribeForNewsletterCheckbox => By.CssSelector("input.form-check-input.font-weight-light");
-        private By SignUpButton => By.CssSelector("bbbbutton.btn.btn-primary");
+        private By SignUpButton => By.CssSelector("button.btn.btn-primary");
         private By UserProfileButton => By.CssSelector("img[alt='GoBigReview-user']");
         private By EmailTakenValidationError => By.CssSelector("div.text-danger.errors-field");
 
