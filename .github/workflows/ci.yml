@@ -11,56 +11,43 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
  
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
  
-    - name: Install Chrome
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y wget gnupg unzip
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
+      - name: Setup Chrome and ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
  
-    - name: Install ChromeDriver
-      run: |
-        CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-        CHROMEDRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json" | jq -r --arg VER "$CHROME_VERSION" '.versions[] | select(.version | startswith($VER)) | .version' | head -n 1)
-        wget "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/${CHROMEDRIVER_VERSION}/linux64/chromedriver-linux64.zip"
-        unzip chromedriver-linux64.zip
-        sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
-        sudo chmod +x /usr/local/bin/chromedriver
+      - name: Restore dependencies
+        run: dotnet restore
  
-    - name: Restore dependencies
-      run: dotnet restore
+      - name: Build solution
+        run: dotnet build --no-restore
  
-    - name: Build solution
-      run: dotnet build --no-restore
-
-    - name: Install Allure CLI
-      run: |
-        wget https://github.com/allure-framework/allure2/releases/download/2.34.0/allure-2.34.0.tgz
-        tar -zxvf allure-2.34.0.tgz
-        sudo mv allure-2.34.0 /opt/allure
-        sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+      - name: Install Allure CLI
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.34.0/allure-2.34.0.tgz
+          tar -zxvf allure-2.34.0.tgz
+          sudo mv allure-2.34.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
  
-   - name: Run tests with Allure
-      run: dotnet test --no-build --logger:"console;verbosity=normal"
+      - name: Run tests with Allure
+        run: dotnet test --no-build --logger:"console;verbosity=normal"
  
-    - name: Generate Allure Report
-      if: always()
-      run: |
-        allure generate allure-results --clean -o allure-report
+      - name: Generate Allure Report
+        if: always()
+        run: |
+          allure generate allure-results --clean -o allure-report
  
-    - name: Deploy Allure Report to GitHub Pages 🚀
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./allure-report
+      - name: Deploy Allure Report to GitHub Pages 🚀
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
