@@ -58,21 +58,15 @@ jobs:
 
           sudo ln -s /opt/allure/bin/allure /usr/bin/allure
 
-      - name: Install NuGet packages for Allure reporting
+      - name: Check project structure
 
         run: |
 
-          dotnet add gobigreviews.com/Gobigreviews.csproj package Allure.NUnit 
-
-          dotnet add gobigreviews.com/Gobigreviews.csproj package NUnit
-
-          dotnet add gobigreviews.com/Gobigreviews.csproj package NUnit3TestAdapter
-
-          dotnet add gobigreviews.com/Gobigreviews.csproj package Microsoft.NET.Test.Sdk
+          find . -name "*.csproj" -type f
 
       - name: Run tests with Allure results
 
-        run: dotnet test --no-build --logger:"trx;LogFileName=test-results.trx" --results-directory:./allure-results
+        run: dotnet test --no-build --logger:"trx;LogFileName=test-results.trx" --results-directory:./TestResults
 
       - name: Generate Allure Report
 
