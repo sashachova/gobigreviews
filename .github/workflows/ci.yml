@@ -42,7 +42,7 @@ jobs:
  
     - name: Build solution
       run: dotnet build --no-restore
-      
+
     - name: Install Allure CLI
       run: |
         wget https://github.com/allure-framework/allure2/releases/download/2.34.0/allure-2.34.0.tgz
@@ -51,8 +51,7 @@ jobs:
         sudo ln -s /opt/allure/bin/allure /usr/bin/allure
  
     - name: Run tests with Allure
-      run: dotnet test --no-build --logger:"console;verbosity=normal"
- 
+      run: dotnet test --no-build --logger:"Allure" --results-directory ./allure-results
    
  
     - name: Generate Allure Report
