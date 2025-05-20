@@ -1,6 +1,22 @@
-{     
-    "allure": 
-    {        
-         "directory": "allure-results"
+{
+
+    "allure": {
+  
+      "directory": "allure-results",
+  
+      "links": [
+  
+        "https://{repo-url}"
+  
+      ],
+  
+      "brokenTestData": {
+  
+        "enabled": true
+  
+      }
+  
     }
-}
+  
+  }
+   
