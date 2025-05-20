@@ -37,8 +37,8 @@ jobs:
           sudo mv allure-2.34.0 /opt/allure
           sudo ln -s /opt/allure/bin/allure /usr/bin/allure
  
-      - name: Run tests with Allure
-        run: dotnet test --no-build --logger:"console;verbosity=normal"
+      - name: Run tests with Allure results
+        run: dotnet test --no-build --logger:"console;verbosity=normal" --results-directory allure-results
  
       - name: Generate Allure Report
         if: always()
