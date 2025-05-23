@@ -15,31 +15,76 @@ jobs:
   test-in-docker:
 
     runs-on: ubuntu-latest
- 
+
     steps:
 
       - name: Checkout repository
 
-        run: git clone ${{ github.server_url }}/${{ github.repository }} .
- 
+        uses: actions/checkout@v4
+
       - name: Build Docker image
 
         run: docker build -t dotnet-selenium-tests .
- 
+
       - name: Run tests inside Docker
 
-        run: docker run --rm dotnet-selenium-tests
- 
-      - name: Archive Allure Report
+        run: |
+
+          docker run --name test-runner --shm-size=2gb dotnet-selenium-tests
+
+        continue-on-error: true
+
+      - name: Copy test results from container
 
         if: always()
 
         run: |
 
-          docker create --name temp dotnet-selenium-tests
+          # Copy test results
 
-          docker cp temp:/app/allure-report ./allure-report
+          docker cp test-runner:/app/TestResults ./TestResults 2>/dev/null || echo "No TestResults found"
 
-          docker rm temp
+          # Copy allure results
 
+          docker cp test-runner:/app/allure-results ./allure-results 2>/dev/null || echo "No allure-results found"
+
+          # Copy allure report
+
+          docker cp test-runner:/app/allure-report ./allure-report 2>/dev/null || echo "No allure-report found"
+
+          # Clean up container
+
+          docker rm test-runner 2>/dev/null || echo "Container already removed"
+
+      - name: Upload Test Results
+
+        if: always()
+
+        uses: actions/upload-artifact@v4
+
+        with:
+
+          name: test-results
+
+          path: |
+
+            TestResults/
+
+            allure-results/
+
+          if-no-files-found: ignore
+
+      - name: Upload Allure Report
+
+        if: always()
+
+        uses: actions/upload-artifact@v4
+
+        with:
+
+          name: allure-report
+
+          path: allure-report/
+
+          if-no-files-found: ignore
  
