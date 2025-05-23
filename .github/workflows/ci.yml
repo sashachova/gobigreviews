@@ -1,57 +1,45 @@
-name: .NET Selenium Tests via Docker
+name: Run .NET Selenium Tests in Docker
  
 on:
 
   push:
 
-    branches: [ "main" ]
+    branches: ["main"]
 
   pull_request:
 
-    branches: [ "main" ]
+    branches: ["main"]
  
 jobs:
 
-  run-tests-in-docker:
+  test-in-docker:
 
     runs-on: ubuntu-latest
  
     steps:
 
-      - name: Checkout code
+      - name: Checkout repository
 
-        uses: actions/checkout@v3
+        run: git clone ${{ github.server_url }}/${{ github.repository }} .
  
-      - name: Set up Docker Compose
+      - name: Build Docker image
+
+        run: docker build -t dotnet-selenium-tests .
+ 
+      - name: Run tests inside Docker
+
+        run: docker run --rm dotnet-selenium-tests
+ 
+      - name: Archive Allure Report
+
+        if: always()
 
         run: |
 
-          docker-compose build
+          docker create --name temp dotnet-selenium-tests
 
-          docker-compose up --abort-on-container-exit
- 
-      - name: Upload Allure report as artifact
+          docker cp temp:/app/allure-report ./allure-report
 
-        if: always()
-
-        uses: actions/upload-artifact@v2
-
-        with:
-
-          name: allure-report
-
-          path: allure-report
- 
-      - name: Deploy Allure Report to GitHub Pages 🚀
-
-        if: always()
-
-        uses: peaceiris/actions-gh-pages@v3
-
-        with:
-
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-          publish_dir: ./allure-report
+          docker rm temp
 
  
