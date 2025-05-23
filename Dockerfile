@@ -81,9 +81,21 @@ RUN CHROME_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-test
 
 RUN google-chrome --version && chromedriver --version
  
-# Install Java (required for Allure)
+# Update package list and install Java (try multiple approaches)
 
-RUN apt-get update && apt-get install -y openjdk-11-jre && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+
+    (apt-get install -y default-jre || \
+
+     apt-get install -y openjdk-17-jre || \
+
+     apt-get install -y openjdk-11-jre) && \
+
+    rm -rf /var/lib/apt/lists/*
+ 
+# Verify Java installation
+
+RUN java -version
  
 # Install Allure CLI
 
@@ -101,13 +113,9 @@ RUN wget https://github.com/allure-framework/allure2/releases/download/2.24.0/al
 
 COPY . .
  
-# Restore dependencies
+# Restore dependencies and build
 
-RUN dotnet restore
- 
-# Build project
-
-RUN dotnet build
+RUN dotnet restore && dotnet build
  
 # Create directories for test results
 
