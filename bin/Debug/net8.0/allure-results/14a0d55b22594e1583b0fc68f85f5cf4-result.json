@@ -1,0 +1,50 @@
+{
+  "uuid": "8f9f66d3-b2f0-4c6a-8765-9f8e747f1e08",
+  "historyId": "59b32a34158ca291c330caee221eecec",
+  "testCaseId": "61ff404454078d7dd35a7cd01359ff25",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_RegistrationFormIsDisplayed()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_RegistrationFormIsDisplayed"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "Verify Registration Form Display",
+  "status": "passed",
+  "stage": "finished",
+  "description": "Ensures all fields and elements in the registration form are displayed.",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748011551448,
+  "stop": 1748011565971
+}

@@ -1,0 +1,57 @@
+{
+  "uuid": "a5ee7c99-b136-4e4e-b723-6a721c627e44",
+  "historyId": "2b3e6523a2badcdc6d5aeac35ba11901",
+  "testCaseId": "bb850053e6c27d4e7f9847a03b2c6e0b",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_UserIsRegisteredWithAllValidData()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_UserIsRegisteredWithAllValidData"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "Successful User Registration",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  User profile button is not displayed\nAssert.That(SignUp.IsUserProfileButtonDisplayed(), Is.True)\n  Expected: True\n  But was:  False\n",
+    "trace": "   at Gobigreviews.Tests.SignUpTests.SignUp_UserIsRegisteredWithAllValidData() in /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/Gobigreviews/Tests/SignUpTests.cs:line 139\n"
+  },
+  "stage": "finished",
+  "description": "Verifies that a user can register with valid data.",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748010711888,
+  "stop": 1748010740104
+}

@@ -1,0 +1,63 @@
+{
+  "uuid": "f085419d-4924-40bc-9dec-f0fb86c35471",
+  "historyId": "3ff6d9e89b62f198217a21245b323f76",
+  "testCaseId": "6411ec8cfc4f731b56e9a03ef6573009",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_ValidationErrorIsDisplayedWhenEmailHasAlreadyBeenTaken()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_ValidationErrorIsDisplayedWhenEmailHasAlreadyBeenTaken"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    }
+  ],
+  "links": [],
+  "name": "Validation Error for Duplicate Email",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Validation error is not displayed when email has already been taken\nAssert.That(SignUp.IsEmailTakenErrorDisplayed(), Is.True)\n  Expected: True\n  But was:  False\n",
+    "trace": "   at Gobigreviews.Tests.SignUpTests.SignUp_ValidationErrorIsDisplayedWhenEmailHasAlreadyBeenTaken() in /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/Gobigreviews/Tests/SignUpTests.cs:line 173\n"
+  },
+  "stage": "finished",
+  "description": "Checks if validation error is shown when email is already taken.",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "30ad01bc-d52c-4426-ac5c-4fdf791ffbcf-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1748011617215,
+  "stop": 1748011648511
+}

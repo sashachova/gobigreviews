@@ -1,0 +1,73 @@
+{
+  "uuid": "7b93718b-0e8e-4277-9cc1-cac7d1175d10",
+  "historyId": "fedc711b194a05e6194da58a34dfad27",
+  "testCaseId": "3414f34b28503fa6dabfbff17eba3be1",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignUpTests.SignUp_WithFakerGeneratedData(System.String,System.String,System.String)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignUp_WithFakerGeneratedData"
+    },
+    {
+      "name": "testClass",
+      "value": "SignUpTests"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "SignUp with Faker-Generated Data",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  User profile button is not displayed\nAssert.That(SignUp.IsUserProfileButtonDisplayed(), Is.True)\n  Expected: True\n  But was:  False\n",
+    "trace": "   at Gobigreviews.Tests.SignUpTests.SignUp_WithFakerGeneratedData(String name, String email, String password) in /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/Gobigreviews/Tests/SignUpTests.cs:line 199\n"
+  },
+  "stage": "finished",
+  "description": "Verifies registration with dynamically generated user data.",
+  "steps": [],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "name",
+      "value": "\"Justina Champlin\"",
+      "excluded": false
+    },
+    {
+      "name": "email",
+      "value": "\"Margaretta7@hotmail.com\"",
+      "excluded": false
+    },
+    {
+      "name": "password",
+      "value": "\"@1Aasaeuieoa\"",
+      "excluded": false
+    }
+  ],
+  "start": 1748011157527,
+  "stop": 1748011183973
+}

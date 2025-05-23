@@ -27,6 +27,7 @@ namespace Gobigreviews.Pages.Components
         private By SignUpButton => By.CssSelector("button.btn.btn-primary");
         private By UserProfileButton => By.CssSelector("img[alt='GoBigReview-user']");
         private By EmailTakenValidationError => By.CssSelector("div.text-danger.errors-field");
+        
 
         public void WaitForPageToLoad()
         {
@@ -72,6 +73,7 @@ namespace Gobigreviews.Pages.Components
         public void ClickSignUpButton() => ElementHelper.Click(driver, SignUpButton);
         public void UserRegistrationSuccessful() =>  ElementHelper.IsDisplayed(driver, UserProfileButton);
         public void UserRegistrationFailed() => ElementHelper.IsDisplayed(driver, EmailTakenValidationError);
+
         
     }
 }

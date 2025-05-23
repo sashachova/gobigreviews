@@ -1,0 +1,45 @@
+{
+  "uuid": "c1f0a60e-a236-4fe8-8f23-a01b1173248b",
+  "historyId": "8b6f888f962c62ca794278b0d833c8e9",
+  "testCaseId": "e54bc898217832d8b5360bc102eccf88",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignInTests.SignIn_UserIsLoggedInWithAllValidData()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignIn_UserIsLoggedInWithAllValidData"
+    },
+    {
+      "name": "testClass",
+      "value": "SignInTests"
+    }
+  ],
+  "links": [],
+  "name": "SignIn_UserIsLoggedInWithAllValidData",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748012897427,
+  "stop": 1748012912665
+}

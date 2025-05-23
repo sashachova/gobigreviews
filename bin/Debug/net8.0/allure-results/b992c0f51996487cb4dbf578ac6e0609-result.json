@@ -1,0 +1,52 @@
+{
+  "uuid": "99ea5318-50a0-48f6-b90b-4bcb824c4faf",
+  "historyId": "8b6f888f962c62ca794278b0d833c8e9",
+  "testCaseId": "e54bc898217832d8b5360bc102eccf88",
+  "fullName": "Gobigreviews:Gobigreviews.Tests.SignInTests.SignIn_UserIsLoggedInWithAllValidData()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "Aleksandras-Air"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Gobigreviews.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SignIn_UserIsLoggedInWithAllValidData"
+    },
+    {
+      "name": "testClass",
+      "value": "SignInTests"
+    }
+  ],
+  "links": [],
+  "name": "SignIn_UserIsLoggedInWithAllValidData",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  User profile button is not displayed\nAssert.That(signUp.IsUserProfileButtonDisplayed(), Is.True)\n  Expected: True\n  But was:  False\n",
+    "trace": "   at Gobigreviews.Tests.SignInTests.SignIn_UserIsLoggedInWithAllValidData() in /Users/aleksandratolmachova/Desktop/c#/gobigreviews.com/Gobigreviews/Tests/SignInTests.cs:line 79\n"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748012424208,
+  "stop": 1748012448552
+}

@@ -1,0 +1,16 @@
+{
+  "uuid": "246936b7-65c4-47a9-b3e2-d1e2e7dfd079",
+  "name": "Gobigreviews.Tests.SignUpTests",
+  "children": [
+    "7243c89a-66a1-41c2-89c3-df47c0e70efa",
+    "79655afc-d471-4411-b1e5-95a474e6b8ed",
+    "84138c83-cb28-437b-b955-f88090a66208",
+    "9e2bd802-731a-4ce2-9845-9be91c1bb823",
+    "8a4cdccd-84c1-422a-96a5-31b84857a014"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1748011972781,
+  "stop": 1748012079953
+}
