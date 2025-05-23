@@ -58,11 +58,11 @@ namespace Gobigreviews.Tests
  
         [Test]
 
-        //[AllureName("Successful User Registration")]
+        [AllureName("Successful User Sign In")]
 
-        //[AllureDescription("Verifies that a user can register with valid data.")]
+        [AllureDescription("Verifies that a user can sign in  with valid data.")]
 
-        //[AllureSeverity(SeverityLevel.critical)] // Uses Allure.Net.Commons.SeverityLevel
+        [AllureSeverity(SeverityLevel.critical)] // Uses Allure.Net.Commons.SeverityLevel
 
         public void SignIn_UserIsLoggedInWithAllValidData()
 
